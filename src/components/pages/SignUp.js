@@ -1,3 +1,4 @@
+import SignupImage from "../../assets/images/signup.svg";
 import classes from "../../styles/Signup.module.css";
 import Button from "../Button";
 import Chekbox from "../Checkbox";
@@ -10,7 +11,7 @@ export default function SignUp() {
     <>
       <h1>Create an account</h1>
       <div className="column">
-        <Illustration />
+        <Illustration image={SignupImage} />
         <Form className={`${classes.signup}`}>
           <TextInput type="text" placeholder="Enter name" icon="person" />
           <TextInput
