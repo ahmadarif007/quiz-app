@@ -5,6 +5,15 @@ export default function Answers() {
   return (
     <div className={classes.answers}>
       <Chekbox className={classes.answer} text="test answer" />
+      <Chekbox className={classes.answer} text="test answer" />
+      <Chekbox className={classes.answer} text="test answer" />
+      <Chekbox className={classes.answer} text="test answer" />
+      <Chekbox className={classes.answer} text="test answer" />
+      <Chekbox className={classes.answer} text="test answer" />
+      <Chekbox className={classes.answer} text="test answer" />
+      <Chekbox className={classes.answer} text="test answer" />
+      <Chekbox className={classes.answer} text="test answer" />
+      <Chekbox className={classes.answer} text="test answer" />
     </div>
   );
 }
