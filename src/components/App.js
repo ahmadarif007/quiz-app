@@ -14,10 +14,10 @@ function App() {
         <Layout>
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="signUp" element={<SignUp />} />
-            <Route exact path="login" element={<Login />} />
-            <Route exact path="quiz" element={<Quiz />} />
-            <Route exact path="result" element={<Result />} />
+            <Route exact path="/signUp" element={<SignUp />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/quiz" element={<Quiz />} />
+            <Route exact path="/result" element={<Result />} />
           </Routes>
         </Layout>
       </Router>
