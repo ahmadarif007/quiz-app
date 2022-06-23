@@ -15,8 +15,8 @@ export default function Quiz() {
       <Answers />
       <Answers />
       <Answers />
-      <MiniPlayer />
       <ProgressBar />
+      <MiniPlayer />
     </>
   );
 }
