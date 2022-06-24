@@ -11,4 +11,4 @@ const app = initializeApp({
   appId: process.env.REACT_APP_APP_ID,
 });
 
-export default App;
+export default app;
