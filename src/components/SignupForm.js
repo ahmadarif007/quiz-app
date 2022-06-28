@@ -1,6 +1,6 @@
 // import { async } from "@firebase/util";
 import { useState } from "react";
-import { Link, useRoutes } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import classes from "../styles/Signup.module.css";
 import Button from "./Button";
@@ -18,8 +18,8 @@ export default function SignupForm() {
   const [error, setError] = useState();
   const [loading, setLoading] = useState();
 
-  const { signup } = useAuth();
-  const history = useRoutes();
+  const { signUp } = useAuth();
+  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -31,17 +31,17 @@ export default function SignupForm() {
     try {
       setError("");
       setLoading(true);
-      await signup(email, password, username);
-      history.push("/");
+      await signUp(email, password, username);
+      navigate("/");
     } catch (error) {
       console.log(error);
       setLoading(false);
-      setError("Account not found");
+      setError("Account not create");
     }
   }
 
   return (
-    <Form className={`${classes.signup}`} onSubmit={handleSubmit}>
+    <Form className={`${classes.signUp}`} onSubmit={handleSubmit}>
       <TextInput
         type="text"
         placeholder="Enter name"
