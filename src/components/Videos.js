@@ -5,19 +5,19 @@ import Video from "./Video";
 export default function Videos() {
   return (
     <div className={classes.videos}>
-      <Link to="/quiz">
+      <Link to="quiz">
         <Video />
       </Link>
-      <Link to="/quiz">
+      <Link to="quiz">
         <Video />
       </Link>
-      <Link to="/quiz">
+      <Link to="quiz">
         <Video />
       </Link>
-      <Link to="/quiz">
+      <Link to="quiz">
         <Video />
       </Link>
-      <Link to="/quiz">
+      <Link to="quiz">
         <Video />
       </Link>
     </div>
