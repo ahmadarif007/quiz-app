@@ -17,10 +17,13 @@ export function useAuth() {
 export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [currentUser, setCurrentUser] = useState();
+  const [userName, setUserName] = useState("");
 
   useEffect(() => {
     const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, (user) => {
+      // const displayName = user.displayName;
+      // setUserName(displayName);
       setCurrentUser(user);
       setLoading(false);
     });
@@ -33,8 +36,10 @@ export function AuthProvider({ children }) {
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
+        console.log("user create successfully.....");
         // Signed in
-        const user = userCredential.user;
+        const user = userCredential.auth.currentUser;
+        console.log(user);
         setCurrentUser({
           ...user,
         });
@@ -63,6 +68,7 @@ export function AuthProvider({ children }) {
     signUp,
     login,
     logout,
+    userName,
   };
 
   return (
